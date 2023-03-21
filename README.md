@@ -23,3 +23,27 @@
 
 * 희소 행렬은 요소 중 많은 항들이 0 (영)으로 되어 있는 형태로 기억 장소를 절약하기
 위해 링크드 리스트를 이용하여 저장한다
+
+<h3> 1-2 스택(Stack) - LIFO</h3>
+<p>스택은 리스트의 한쪽 끝으로만 자료의 삽입 및 삭제가 이루어지는 구조로 </br>먼저  삽입된 자료가 맨 나중에 삭제가 되는 후입 선출로 Lasf In First Out</br>방식이다</p>
+
+![image](https://user-images.githubusercontent.com/106642094/226506986-7e7c316a-1fa0-46df-be3c-b856901e84eb.png)
+
+![image](https://user-images.githubusercontent.com/106642094/226507009-41341911-103c-4511-b868-1bede771e987.png)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
