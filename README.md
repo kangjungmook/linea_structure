@@ -4,6 +4,9 @@
 
 관련된 자료들이 일정하게 나열되어 있는 구조를 리스트라고 한다.
 
+![image](https://user-images.githubusercontent.com/106642094/226522751-ac9a7a50-5b52-408c-80f9-90db4d2cfd88.png)
+
+
 <h3>연결 리스트</h3>
 
 선형 리스트 : 배열(Array)과 같이 연속되는 기억장소에 저장되는 리스트입니다.
@@ -88,10 +91,9 @@ public class LinkedList {
 <h3> 1-2 스택(Stack) - LIFO</h3>
 <p>스택은 리스트의 한쪽 끝으로만 자료의 삽입 및 삭제가 이루어지는 구조로 </br>먼저  삽입된 자료가 맨 나중에 삭제가 되는 후입 선출로 Lasf In First Out</br>방식이다</p>
 
-![image](https://user-images.githubusercontent.com/106642094/226506986-7e7c316a-1fa0-46df-be3c-b856901e84eb.png)
+![image](https://user-images.githubusercontent.com/106642094/226522834-989817c8-0c29-413a-973d-4bc520b2a568.png)
 
-![image](https://user-images.githubusercontent.com/106642094/226507009-41341911-103c-4511-b868-1bede771e987.png)
-
+![image](https://user-images.githubusercontent.com/106642094/226522851-d1ba72fd-cc23-4a1b-8dcf-619cdece84d2.png)
 <h3>스택으로 간단하게 자바로 구현</h3>
 
 ```java
