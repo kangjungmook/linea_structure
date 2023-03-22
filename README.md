@@ -139,6 +139,99 @@ public class IntStack {
 
 ```
 
+<h3> 큐 (queue)</h3>
+
+*  큐(queue)는 한쪽 방향으로 데이터가 삽입되고 반대 방향으로 데이터가 삭제되는 </br>
+들어온 데이터가 먼저 나가는 선입 선출(First In Fist Out)구조이다.
+
+- 컴퓨터 시스템의 작업 스케줄에서 특별한 우선 순위가 없는 경구 먼저 들어온 프로세스가</br>
+먼저 처리 된다
+- 계산대에서 계산대에 먼저 도착한 고객이 먼저 계산하고 나간다.</br>
+- 버스 승강장에서 앞에 선 사람이 먼저 승리한다
+
+![image](https://user-images.githubusercontent.com/106642094/226807921-7c648336-f0ba-4ed6-ab9e-106679773a2a.png)
+
+<h3> 프런트 (Front) </h3>
+
+* 가장 먼저 삽입된 자료의 기억 공간을 가리키는 포인터 이다.
+* 삭제 작업을 할 때 사용
+
+<h3> 리어 (Rear) </h3>
+* 가장 마지막에 삽입된 자료가 위치한 기억 장소를 가리키는 포인터 이다.
+* 삽입 작업을 할 때 사용
+
+<h3> Queue의 응용 분야 </h3>
+
+* 창구 업무나 택시 정거장처럼 서비스순서를 기다리는 등의 대기 행열의 처리에 사용한다.
+* 운영 체제의 작업 스케줄링에 사용
+
+![image](https://user-images.githubusercontent.com/106642094/226808539-6bef92bd-04f2-43aa-994e-dd769532107a.png)
+
+<h3> 뎈Deque </h3>
+
+* 삽입과 삭제가 양쪽 끝에서 모두 발생할 수 있는 자료 구조이다.
+
+![image](https://user-images.githubusercontent.com/106642094/226808911-d6718487-95bc-43e1-9ff7-1251a069d6d3.png)
+
+```java
+public class intQueue {
+	private int que[]; //큐용 배열
+	private int capacity; // 큐의 크기
+	private int front; // 맨 처음 요소의 커서
+	private int rear; //맨끝 요소의 커서
+	private int num; //현재 데이터 개수
+	
+	// 실행시 예외 : 큐이 비어있음
+	public class EmptyIntQueueException extends RuntimeException {
+		public EmptyIntQueueException() {}
+	}
+	// 실행시 예외 : 큐이 가득참
+	public class OverflowIntQueueException extends RuntimeException {
+		 public OverflowIntQueueException() {}
+	}
+	
+	// 생성자
+	public intQueue(int maxlen) {
+		num = front = rear = 0;
+		capacity = maxlen;
+		try {
+			que = new int[capacity];
+			// 큐 본체용 배열 생성
+		} catch (OutOfMemoryError e) {
+			// 생성 할수 없음
+			capacity = 0;
+		}
+	}
+	
+	public int enque(int x) throws OverflowIntQueueException {
+		if(num >=capacity) {
+			throw new OverflowIntQueueException();
+		
+		}
+		que[rear ++] =x;
+		num++;
+		if(rear == capacity) {
+			rear = 0;
+		}
+		return x;
+	}
+	
+	
+	public int deque() throws EmptyIntQueueException {
+		if (num <= 0)
+			throw new EmptyIntQueueException();
+		int x = que[front]++;
+		num--;
+		if(front == capacity) {
+			front =0;
+		}
+		return x;
+	}
+	
+
+}
+```
+
 
 
 
