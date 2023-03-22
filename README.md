@@ -173,6 +173,9 @@ public class IntStack {
 
 ![image](https://user-images.githubusercontent.com/106642094/226808911-d6718487-95bc-43e1-9ff7-1251a069d6d3.png)
 
+
+<h2> 스택 구현 </h2>
+
 ```java
 public class intQueue {
 	private int que[]; //큐용 배열
