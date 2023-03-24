@@ -331,7 +331,6 @@ public class intQueue {
 노드(루트)를 먼저 방문하고 왼쪽 서브 트리, 오른쪽 서브 트리 순으로 방문
 
 루트 방문 ➞ 왼쪽 서브 트리 방문 ➞ 오른쪽 서브 트리 방문(Root -> Left -> Right)
-
 -> A, B, D, E, F, C
 
 - 중위 순회(Inorder)
@@ -339,7 +338,6 @@ public class intQueue {
 왼쪽 서브 트리, 루트, 오른쪽 서브 트리 순으로 방문
 
 왼쪽 서브 트리 방문 ➞ 루트 방문 ➞ 오른쪽 서브 트리 방문 (Left -> Root -> Right)
-
 -> D, B
 
 - 중위 순회(Inorder)
@@ -347,7 +345,6 @@ public class intQueue {
 왼쪽 서브 트리, 루트, 오른쪽 서브 트리 순으로 방문
 
 왼쪽 서브 트리 방문 ➞ 루트 방문 ➞ 오른쪽 서브 트리 방문 (Left -> Root -> Right)
-
 -> D, B, F, E
 
 - 중위 순회(Inorder)
@@ -355,7 +352,6 @@ public class intQueue {
 왼쪽 서브 트리, 루트, 오른쪽 서브 트리 순으로 방문
 
 왼쪽 서브 트리 방문 ➞ 루트 방문 ➞ 오른쪽 서브 트리 방문 (Left -> Root -> Right)
-
 -> D, B, F, E, A, C
 
 - 후위 순회(Postorder)
@@ -363,7 +359,6 @@ public class intQueue {
 왼쪽 서브 트리, 오른쪽 서브 트리, 루트 순으로 방문
 
 왼쪽 서브 트리 방문 ➞ 오른쪽 서브 트리 방문 ➞ 루트 방문 (Left -> Right -> Root)
-
 -> D
 
 - 후위 순회(postorder)
@@ -371,51 +366,34 @@ public class intQueue {
 왼쪽 서브 트리, 오른쪽 서브 트리, 루트 순으로 방문
 
 왼쪽 서브 트리 방문 ➞ 오른쪽 서브 트리 방문 ➞ 루트 방문 (Left -> Right -> Root)
-
 -> D, F, E
 
 - 후위 순회(Potorder)
-
 왼쪽 서브 트리, 오른쪽 서브 트리, 루트 순으로 방문
 
 왼쪽 서브 트리 방문 ➞ 오른쪽 서브 트리 방문 ➞ 루트 방문 (Left -> Right -> Root)
-
 -> D, F, E, B, C, A</h4>
 
 ## 이진 트리 탐색(Binary Search Tree)
 
 <h4> 이진 탐색 트리(binary search tree)는 데이터의 삽입, 삭제, 탐색 등이 자주 발생하는
-
 경우에 효율적인 구조로, 이진 트리이면서 같은 값을 갖는 노드가 없어야 한다.
-
 왼쪽 서브 트리에 있는 모든 데이터는 현재 노드의 값보다 작고,
-
 오른쪽 서브 트리에 있는 모든 노드의 데이터는 현재 노드의 값보다 크다.
-
 데이터 탐색은 루트에서부터 시작된다.
-
 - 루트 노드의 데이터와 찾으려는 데이터를 비교하여 같으면 탐색은 성공 종료
-
 - 루트 노드가 작으면 루트 노드의 오른쪽
-
 - 루트 노드가 크면 루트 노드의 왼쪽
 
 이진 트리 탐색(Binary Search Tree)
 
 이진 탐색 트리(binary search tree)는 데이터의 삽입, 삭제, 탐색 등이 자주 발생하는
-
 경우에 효율적인 구조로, 이진 트리이면서 같은 값을 갖는 노드가 없어야 한다.
-
 왼쪽 서브 트리에 있는 모든 데이터는 현재 노드의 값보다 작고,
-
 오른쪽 서브 트리에 있는 모든 노드의 데이터는 현재 노드의 값보다 크다.
-
 데이터 탐색은 루트에서부터 시작된다.
-
 - 루트 노드의 데이터와 찾으려는 데이터를 비교하여 같으면 탐색은 성공 종료
-
 - 루트 노드가 작으면 루트 노드의 오른쪽
-
 - 루트 노드가 크면 루트 노드의 왼쪽</h4>
 
 ## 이진 트리 삽입
@@ -448,8 +426,50 @@ public class intQueue {
 데이터가 12인 노드의 부모 노드, 즉 데이터가 10인 노드가 삭제된 노드의 자식 노드인
 데이터 15인 노드를 가리키게 한다.
 
+* 삭제할 노드의 자식 노드가 두 개인 경우
+
+삭제할 노드의 자식 노드가 두 개인 경우는 조금 복잡하다.
+우선 삭제할 노드를 왼쪽 서브 트리에서 가장 큰 노드 또는 오른쪽 서브 트리에서 가장
+작은 노드로 대체한다. 그리고 대체된 원래 노드를 삭제한다.
+
+-> 자식 노드가 두 개인 데이터 10 노드를 삭제하려면
+데이터 10 노드를 왼쪽 서브 트리에서 가장 큰 노드인 데이터 7 노드 또는 오른쪽
+서브 트리에서 가장 작은 노드인 데이터 12 노드로 대체한다.
+만약 오른쪽 서브 트리에서 가장 작은 노드인 데이터 12 노드로 대체한다고 가정
+하면 (b)와 같이 나타난다.
+그리고 대체된 원래의 데이터 12 노드를 삭제하면 (c)와 같은 결과가 나온다
+
 ### 노드생성 코드
 ```java
+public class Node {
+	protected int data;
+	protected Node left;
+	protected Node right;
+	
+	public Node (int data, Node left, Node right) {
+		this.data = data;
+		this.left = left;
+		this.right = right;
+	}
+	public int getData() {
+		return data;
+	}
+	public void setData(int data) {
+		this.data = data;
+	}
+	public Node getLeft() {
+		return left;
+	}
+	public void setLeft(Node left) {
+		this.left = left;
+	}
+	public Node getRighet() {
+		return right;
+	}
+	public void setRight(Node right) {
+		this.right = right;
+	}
+}
 ```
 
 
